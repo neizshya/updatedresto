@@ -23,7 +23,7 @@
         <div class="card">
 
           <div class="card-body">
-            <form action="{{ url('/uploadchef') }}" method="Post" enctype="multipart/form-data">
+            <form action="{{ url('/uploadchef') }}" method="Post" enctype="multipart/form-data" id="formchef">
 
                 @csrf
 
@@ -43,11 +43,10 @@
                     <input type="file" name="image" required="">
                 </div>
                 <br>
-                <div>
-                    <button class="btn btn-outline-primary btn-fw" type="submit" id="simpanMenu" value="Simpan">Simpan</button>
 
-                </div>
             </form>
+            <button  class="btn btn-outline-light btn-fw" type="submit" form="formchef" >Simpan</button>
+            <a button class="btn btn-outline-dark btn-fw" href="{{route('chef')}}">Batalkan</button></a>
         </div>
 
     </div>
