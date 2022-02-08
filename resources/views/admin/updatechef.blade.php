@@ -35,15 +35,15 @@ h1 {text-align: center;}
         @csrf
 
         <div class="form-group">
-            <label>Nama Chef</label>
+            <span>Nama Chef</span><br>
             <input style="color: black;" type="text" name="name" value="{{ $data->name }}">
         </div>
         <div class="form-group">
-            <label>Spesialis</label>
+            <span>Spesialis</span><br>
             <input style="color: black;" type="text" name="speciality" value="{{ $data->speciality }}">
         </div>
         <div class="form-group">
-            <label>Instagram</label>
+            <span>Instagram</span><br>
             <input style="color: black;" type="text" name="insta" value="{{$data->insta}}">
         </div>
         <div class="form-group">
@@ -51,7 +51,7 @@ h1 {text-align: center;}
             <img width="150" src="/fotochef/{{ $data->image }}">
         </div>
         <div class="form-group">
-            <label>Foto Baru</label>
+            <span>Foto Baru</span><br>
             <input type="file" name="image" required="">
         </div>
 

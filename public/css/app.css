@@ -189,15 +189,16 @@ sup {
 }
 
 #simpanMenu {
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(0, 106, 192);
+    padding: 6px;
+    background-color: green;
     font-weight: bold;
 }
 
-#simpanMenu:hover {
-    background-color: green;
-    transition: 0.3s;
+#batalkanMenu {
+    background-color: #000;
+}
+#batalkanMenu:hover {
+    background-color: red;
 }
 
 #formMenu {
@@ -218,6 +219,23 @@ sup {
 #updateMenu:hover {
     background-color: salmon;
     transition: 0.3s;
+}
+
+#div-label,
+label {
+    padding-top: 10px;
+}
+
+#simpanChef {
+    background-color: green;
+}
+
+#batalkanChef {
+    background-color: #000;
+}
+
+#batalkanChef:hover {
+    background-color: red;
 }
 
 /*

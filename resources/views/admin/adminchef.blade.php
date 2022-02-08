@@ -32,7 +32,7 @@ h1 {text-align: center;}
 
                   <div class="card-body">
 
-            <div class="table">
+            <div class="table" style="color: #fff;">
             <table class="w-full">
             <tr class="text-center font-bold">
             <th class="border px-5 py-2">Nama Chef</th>

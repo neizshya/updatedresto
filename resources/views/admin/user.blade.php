@@ -27,7 +27,7 @@
               <div class="card-body">
 
                 <div class="table-responsive">
-                    <table class="table table-dark">
+                    <table class="table" style="color: #fff;">
                 <tr class="text-center font-bold" >
                     <th class="border px-5 py-2">Nama</th>
                     <th class="border px-5 py-2">Email</th>

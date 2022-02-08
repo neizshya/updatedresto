@@ -27,26 +27,27 @@
 
                 @csrf
 
-                <div>
-                    <label>Nama</label>
+                <div id="div-label">
+                    <label>Nama</label><br>
                     <input style="color: black;" type="text" name="name" required="" placeholder="Masukan Nama">
                 </div>
                 <div>
-                    <label>Spesialis</label>
+                    <label>Spesialis</label><br>
                     <input style="color: black;" type="text" name="speciality" required="" placeholder="Masukan Spesialis">
                 </div>
                 <div>
-                    <label>Instagram</label>
+                    <label>Instagram</label><br>
                     <input style="color: black;" type="text" name="insta" placeholder="Masukan Instagram">
                 </div>
                 <div>
+                  <br>
                     <input type="file" name="image" required="">
                 </div>
                 <br>
 
             </form>
-            <button  class="btn btn-outline-light btn-fw" type="submit" form="formchef" >Simpan</button>
-            <a button class="btn btn-outline-dark btn-fw" href="{{route('chef')}}">Batalkan</button></a>
+            <button  class="btn" id="simpanChef" type="submit" form="formchef" >Simpan</button>
+            <a button class="btn" id="batalkanChef" href="{{route('chef')}}">Batalkan</button></a>
         </div>
 
     </div>

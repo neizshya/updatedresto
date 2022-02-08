@@ -17,3 +17,4 @@
  <link rel="stylesheet" href="admin/template/assets/css/style.css">
  <!-- End layout styles -->
  <link rel="shortcut icon" href="admin/template/assets/images/favicon.png" />
+ <link rel="stylesheet" href="{{asset('admin')}}/css/app.css">

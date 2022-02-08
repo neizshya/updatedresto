@@ -33,30 +33,30 @@
             @csrf
 
             <div class="form-group">
-                <label>Nama Menu</label>
+                <span>Nama Menu</span><br>
                 <input style="color: black" type="text" name="nm_makanan" value="{{$data->nm_makanan}}" >
             </div>
             <div class="form-group">
-                <label>Harga</label>
+                <span>Harga</span><br>
                 <input style="color: black" type="num" name="harga" value="{{$data->harga}}" >
             </div>
 
             <div class="form-group">
-                <label>Deskripsi Menu</label>
+                <span>Deskripsi Menu</span><br>
                 <input style="color: black" type="text" name="deskripsi" value="{{$data->deskripsi}}">
             </div>
             <div class="form-group">
-                <label>Foto Menu Sebelum Update</label>
+                <span>Foto Sebelum Update</span><br>
                 <img width="150" src="/FotoMakanan/{{$data->gb_makanan}}" >
             </div>
               <div class="form-group">
-                <label>Foto Menu Baru</label>
-                <input style="color: black" type="file" name="gb_makanan" >
+                <span>Foto Menu Baru</span><br>
+                <input style="color: #fff" type="file" name="gb_makanan" >
             </div>
 
         </form>
-        <button  class="btn btn-outline-light btn-fw" type="submit" form="updatemenu" >Simpan</button>
-        <a button class="btn btn-outline-dark btn-fw" href="{{route('makanan')}}">Batalkan</button></a>
+        <button  class="btn" id="simpanMenu" type="submit" form="updatemenu" >Simpan</button>
+        <a button class="btn" id="batalkanMenu" href="{{route('makanan')}}">Batalkan</button></a>
           </div>
         </div>
     </div>
