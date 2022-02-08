@@ -56,7 +56,7 @@
 
         </form>
         <button  class="btn btn-outline-light btn-fw" type="submit" form="updatemenu" >Simpan</button>
-        <a button class="btn btn-outline-dark btn-fw" href="{{route('menu')}}">Batalkan</button></a>
+        <a button class="btn btn-outline-dark btn-fw" href="{{route('makanan')}}">Batalkan</button></a>
           </div>
         </div>
     </div>
