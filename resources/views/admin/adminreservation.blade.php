@@ -32,29 +32,29 @@ h1 {text-align: center;}
 
           <div class="card-body">
 
-    <div class="table" style="color: #fff;">
-        <table class="w-full">
+    <div class="table-responsive" style="color: #fff;">
+        <table class="table table-hover">
             <tr class="text-center font-bold">
-                <th class="border px-2 py-2">Nama</th>
-                <th class="border px-2 py-2">Email</th>
-                <th class="border px-2 py-2">No HP</th>
-                <th class="border px-2 py-2">Tanggal</th>
-                <th class="border px-2 py-2">Waktu</th>
-                <th class="border px-2 py-2">Pesan</th>
-                <th class="border px-2 py-2">Action</th>
+                <th >Nama</th>
+                <th >Email</th>
+                <th >No HP</th>
+                <th >Tanggal</th>
+                <th >Waktu</th>
+                <th >Pesan</th>
+                <th >Action</th>
             </tr>
 
             @foreach ($data as $data)
 
 
             <tr align='center'>
-                <td class="border px-2 py-2">{{ $data->name }}</td>
-                <td class="border px-2 py-2">{{ $data->email }}</td>
-                <td class="border px-2 py-2">{{ $data->phone }}</td>
-                <td class="border px-2 py-2">{{ $data->date }}</td>
-                <td class="border px-2 py-2">{{ $data->time }}</td>
-                <td class="border px-2 py-2">{{ $data->message }}</td>
-                <td class="border px-2 py-2" id="actionMenu">
+                <td >{{ $data->name }}</td>
+                <td >{{ $data->email }}</td>
+                <td >{{ $data->phone }}</td>
+                <td >{{ $data->date }}</td>
+                <td >{{ $data->time }}</td>
+                <td >{{ $data->message }}</td>
+                <td  id="actionMenu">
                     <a href="{{url('/deletereser',$data->id)}} " class="btn btn-sm btn-danger" id="delRes">Selesaikan <br> Reservasi</a><br><br>
                 </td>
             </tr>

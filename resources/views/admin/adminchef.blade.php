@@ -32,24 +32,24 @@ h1 {text-align: center;}
 
                   <div class="card-body">
 
-            <div class="table" style="color: #fff;">
-            <table class="w-full">
+            <div class="table-responsive" style="color: #fff;">
+            <table class="table table-hover">
             <tr class="text-center font-bold">
-            <th class="border px-5 py-2">Nama Chef</th>
-            <th class="border px-5 py-2">Spesialis</th>
-            <th class="border px-5 py-2">Instagram</th>
-            <th class="border px-5 py-2">Foto</th>
-            <th class="border px-5 py-2">action</th>
+            <th>Nama Chef</th>
+            <th>Spesialis</th>
+            <th>Instagram</th>
+            <th>Foto</th>
+            <th>action</th>
         </tr>
 
         @foreach ($data as $data)
 
         <tr align="center">
-            <td class="border px-5 py-2">{{ $data->name }}</td>
-            <td class="border px-5 py-2">{{ $data->speciality }}</td>
-            <td class="border px-5 py-2">{{ $data->insta }}</td>
-            <td class="border px-5 py-2"><img height="300" width="300" src="/fotochef/{{ $data->image}}"></td>
-            <td class="border px-5 py-2">
+            <td>{{ $data->name }}</td>
+            <td>{{ $data->speciality }}</td>
+            <td>{{ $data->insta }}</td>
+            <td><img height="300" width="300" src="/fotochef/{{ $data->image}}"></td>
+            <td>
                 <a href="{{ url('/pdchef',$data->id) }}"class="btn btn-sm btn-danger" >Update</a><br><br>
                 <a href="{{ url('/deletechef',$data->id) }}"class="btn btn-sm btn-warning">Delete</a></td>
         </tr>

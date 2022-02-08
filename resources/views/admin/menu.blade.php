@@ -20,27 +20,27 @@
                 </nav>
               </div>
 
-    <div class="col-lg-12 grid-margin stretch-card">
+    <div class="col-12 grid-margin stretch-card">
         <div class="card">
 
           <div class="card-body">
 
-            <div class="table" style="color: #fff;">
-                <table class="w-full">
+            <div class="table-responsive" style="color: #fff;">
+                <table class="table table-hover">
                        <tr class="text-center font-bold">
-                           <th class="border px-5 py-2">Nama Menu</th>
-                           <th class="border px-5 py-2">Harga</th>
-                           <th class="border px-5 py-2">Deskripsi</th>
-                           <th class="border px-5 py-2">Foto menu</th>
-                           <th class="border px-5 py-2">Action</th>
+                           <th >Nama Menu</th>
+                           <th >Harga</th>
+                           <th >Deskripsi</th>
+                           <th >Foto menu</th>
+                           <th >Action</th>
                        </tr>
                        @foreach ($data as $data)
                        <tr align="center">
-                        <td class="border px-5 py-2" >{{$data->nm_makanan}}</td>
-                        <td class="border px-5 py-2">{{$data->harga}}</td>
-                        <td class="border px-5 py-2">{{$data->deskripsi}}</td>
-                        <td class="border px-5 py-2"><img  src="/FotoMakanan/{{$data->gb_makanan}}" height="300"></td>
-                        <td class="border px-5 py-2">
+                        <td >{{$data->nm_makanan}}</td>
+                        <td >{{$data->harga}}</td>
+                        <td >{{$data->deskripsi}}</td>
+                        <td ><img  src="/FotoMakanan/{{$data->gb_makanan}}" height="300"></td>
+                        <td >
                             <a href="{{url('/deletemenu',$data->id)}} " class="btn btn-sm btn-danger" id="delMenu">Delete</a><br><br>
                             <a href="{{url('/updateview',$data->id)}} " class="btn btn-sm btn-warning" id="updateMenu"> Ubah</a>
                         </td>
