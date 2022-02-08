@@ -50,7 +50,7 @@ Route::post('/uploadchef',[AdminController::class,"uploadchef"]);
 
 Route::get('/pdchef/{id}',[AdminController::class,"pdchef"]);
 
-Route::post('/updfoodchef/{id}',[AdminController::class,"udtfoodchef"]);
+Route::post('/updfoodchef/{id}',[AdminController::class,"updfoodchef"]);
 
 Route::get('/deletechef/{id}',[AdminController::class,"deletechef"]);
 Route::get('/tambahchef',[AdminController::class,"cheftbh"])->name('cheftbh');
