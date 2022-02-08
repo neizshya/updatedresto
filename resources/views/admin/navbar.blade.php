@@ -1,7 +1,7 @@
 
     <!-- partial:partials/_sidebar.html -->
     <div class="container-scroller" >
-    <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: black;">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: black;">
         <a class="sidebar-brand brand-logo" href="{{route('admin')}}"><img src="logo/item.png" alt="logo" /></a>
         <a class="sidebar-brand brand-logo-mini" href="{{route('admin')}}"><img src="logo/mini tem.png" alt="logo" /></a>
@@ -30,8 +30,8 @@
             </a>
             <div class="collapse" id="menu">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{{url('/menu')}}">Data Menu</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{url('/tambah')}}"> Tambah Menu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{url('/makanan')}}">Data Menu</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{url('/tbhmenu')}}"> Tambah Menu</a></li>
               </ul>
             </div>
           </li>
@@ -47,7 +47,7 @@
           <div class="collapse" id="chef">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item"> <a class="nav-link" href="{{url('/viewchef')}}">Data Chef</a></li>
-              <li class="nav-item"> <a class="nav-link" href="{{url('/tambahchef')}}"> Tambah Chef</a></li>
+              <li class="nav-item"> <a class="nav-link" href="{{route('cheftbh')}}"> Tambah Chef</a></li>
             </ul>
           </div>
         </li>

@@ -31,7 +31,7 @@ h1 {text-align: center;}
                 <div class="card">
 
                   <div class="card-body">
-    <form action="{{ url('/updatefoodchef',$data->id) }}" method="Post" enctype="multipart/form-data" id="updatechef">
+    <form action="{{ url('/updfoodchef',$data->id) }}" method="Post" enctype="multipart/form-data" id="updatechef">
         @csrf
 
         <div class="form-group">

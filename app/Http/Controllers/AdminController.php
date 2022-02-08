@@ -38,7 +38,7 @@ class AdminController extends Controller
     }
 
 
-    public function menu(){
+    public function makanan(){
 
         $data = makanan::all();
         return view('admin.menu',compact("data"));
@@ -74,7 +74,7 @@ class AdminController extends Controller
         $data->deskripsi=$request->deskripsi;
 
         $data->save();
-        return redirect()->route('menu');
+        return redirect()->route('makanan');
 
     }
 
@@ -95,7 +95,7 @@ class AdminController extends Controller
         $data->deskripsi=$request->deskripsi;
 
         $data->save();
-        return redirect()->route('menu');
+        return redirect()->route('makanan');
 
     }
 
@@ -156,13 +156,13 @@ class AdminController extends Controller
 
     }
 
-    public function updatechef($id)
+    public function pdchef($id)
     {
         $data=foodchef::find($id);
         return view("admin.updatechef",compact("data"));
     }
 
-    public function updatefoodchef(Request $request ,$id)
+    public function updfoodchef(Request $request ,$id)
     {
         $data=foodchef::find($id);
 
@@ -191,7 +191,7 @@ class AdminController extends Controller
         $data->delete();
         return view("admin.adminchef",compact("data"));
     }
-    public function tambahchef(){
+    public function cheftbh(){
 
         $data = foodchef::all();
         return view('admin.tambahchef',compact("data"));

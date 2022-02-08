@@ -50,7 +50,7 @@ h1 {text-align: center;}
             <td class="border px-5 py-2">{{ $data->insta }}</td>
             <td class="border px-5 py-2"><img height="300" width="300" src="/fotochef/{{ $data->image}}"></td>
             <td class="border px-5 py-2">
-                <a href="{{ url('/updatechef',$data->id) }}"class="btn btn-sm btn-danger" >Update</a><br><br>
+                <a href="{{ url('/pdchef',$data->id) }}"class="btn btn-sm btn-danger" >Update</a><br><br>
                 <a href="{{ url('/deletechef',$data->id) }}"class="btn btn-sm btn-warning">Delete</a></td>
         </tr>
 

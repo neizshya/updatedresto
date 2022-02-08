@@ -26,8 +26,8 @@ Route::get('/user',[AdminController::class,"user"]);
 
 ##menu
 Route::get('/deletemenu/{id}',[AdminController::class,"deletemenu"]);
-Route::get('/menu',[AdminController::class,"menu"])->name('menu');
-Route::get('/tambah',[AdminController::class,"tambah"]);
+Route::get('/makanan',[AdminController::class,"makanan"])->name('makanan');
+Route::get('/tbhmenu',[AdminController::class,"tambah"]);
 Route::post('/updatemenu/{id}',[AdminController::class,"update"]);
 
 Route::post('/uploadmakanan',[AdminController::class,"upload"]);
@@ -48,12 +48,12 @@ Route::get('/viewchef',[AdminController::class,"viewchef"])->name('chef');
 
 Route::post('/uploadchef',[AdminController::class,"uploadchef"]);
 
-Route::get('/updatechef/{id}',[AdminController::class,"updatechef"]);
+Route::get('/pdchef/{id}',[AdminController::class,"pdchef"]);
 
-Route::post('/updatefoodchef/{id}',[AdminController::class,"updatefoodchef"]);
+Route::post('/updfoodchef/{id}',[AdminController::class,"udtfoodchef"]);
 
 Route::get('/deletechef/{id}',[AdminController::class,"deletechef"]);
-Route::get('/tambahchef',[AdminController::class,"tambahchef"]);
+Route::get('/tambahchef',[AdminController::class,"cheftbh"])->name('cheftbh');
 
 
 
