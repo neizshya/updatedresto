@@ -28,26 +28,26 @@
             <form action="{{url('/uploadmakanan')}}" method="post" enctype="multipart/form-data" id="formMenu" class="forms-sample">
                 @csrf
                 <div class="form-group">
-                    <span>Nama</span>
+                    <span>Nama</span><br>
                     <input type="text"  name="nm_makanan" placeholder="Masukan Nama Makanan" style="color:black" required>
                 </div>
                 <div class="form-group">
-                    <span>Harga</span>
+                    <span>Harga</span><br>
                     <input type="text" name="harga" placeholder="Harga" style="color:black" required>
                 </div>
                 <div class="form-group">
-                    <span>Foto</span>
+                    <span>Foto</span><br>
                     <input type="file" name="gb_makanan" required style="color: #fff;">
                 </div>
                 <div class="form-group">
-                    <span>Deskripsi</span>
+                    <span>Deskripsi</span><br>
                     <input type="text" name="deskripsi" placeholder="Masukan Deskripsi Makanan" style="color:black" required>
                 </div>
 
 
             </form>
-            <button  class="btn btn-outline-light btn-fw" type="submit" form="formMenu" >Simpan</button>
-            <a button class="btn btn-outline-dark btn-fw" href="{{route('makanan')}}">Batalkan</button></a>
+            <button  class="btn" id="simpanMenu" type="submit" form="formMenu" >Simpan</button>
+            <a button class="btn" id="batalkanMenu" href="{{route('makanan')}}">Batalkan</button></a>
         </div>
 
         </div>

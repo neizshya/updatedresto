@@ -189,7 +189,7 @@ class AdminController extends Controller
     {
         $data=foodchef::find($id);
         $data->delete();
-        return view("admin.adminchef",compact("data"));
+        return redirect()->route('chef');
     }
     public function cheftbh(){
 
