@@ -13,7 +13,6 @@ class AdminController extends Controller
 {
     public function index()
     {
-        dd('tes');
         return view('admin.adminhome');
 
     }
@@ -75,7 +74,7 @@ class AdminController extends Controller
         $data->deskripsi=$request->deskripsi;
 
         $data->save();
-        return redirect()->back();
+        return redirect()->route('menu');
 
     }
 
@@ -96,7 +95,7 @@ class AdminController extends Controller
         $data->deskripsi=$request->deskripsi;
 
         $data->save();
-        return redirect()->back();
+        return redirect()->route('menu');
 
     }
 
@@ -129,7 +128,7 @@ class AdminController extends Controller
 
         $data->delete();
 
-        return redirect()->back();
+        return view("admin.adminreservation",compact("data"));
     }
 
     public function viewchef()
@@ -150,9 +149,10 @@ class AdminController extends Controller
 
         $data->name=$request->name;
         $data->speciality=$request->speciality;
+        $data->insta=$request->insta;
         $data->save();
 
-        return redirect()->back();
+        return redirect()->route('chef');
 
     }
 
@@ -178,9 +178,10 @@ class AdminController extends Controller
 
         $data->name=$request->name;
         $data->speciality=$request->speciality;
+        $data->insta=$request->insta;
 
         $data->save();
-        return redirect()->back();
+        return redirect()->route('chef');
 
     }
 
@@ -188,7 +189,7 @@ class AdminController extends Controller
     {
         $data=foodchef::find($id);
         $data->delete();
-        return redirect()->back();
+        return view("admin.adminchef",compact("data"));
     }
     public function tambahchef(){
 

@@ -11,60 +11,56 @@
 
   </head>
   <body>
-        <div class="content-wrapper">
-            <div class="container-scroller" style="width: 102%">
-                @include('admin.navbar')
-                <div class="col-lg-10 grid-margin stretch-card">
-                    <div class="card">
+    @include('admin.navbar')
+    @include('admin.nav')
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title"> Ubah Daftar Menu </h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('admin')}}">Admin</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ubah Daftar Menu</li>
+              </ol>
+            </nav>
+          </div>
 
-                      <div class="card-body">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
 
-                        <h4 class="card-title">Update Menu</h4>
+          <div class="card-body">
 
-
-    <div style="position: relative; top: 60px; right:-150px">
-        <form action="{{url('/updatemenu',$data->id)}}" method="post" enctype="multipart/form-data">
+        <form action="{{url('/updatemenu',$data->id)}}" method="post" enctype="multipart/form-data" id="updatemenu" class="forms-sample">
             @csrf
 
-            <div>
+            <div class="form-group">
                 <label>Nama Menu</label>
-                <input style="color: black" type="text" name="nm_makanan" value="{{$data->nm_makanan}}" required>
+                <input style="color: black" type="text" name="nm_makanan" value="{{$data->nm_makanan}}" >
             </div>
-            <div>
+            <div class="form-group">
                 <label>Harga</label>
-                <input style="color: black" type="num" name="harga" value="{{$data->harga}}" required>
+                <input style="color: black" type="num" name="harga" value="{{$data->harga}}" >
             </div>
 
-            <div>
+            <div class="form-group">
                 <label>Deskripsi Menu</label>
-                <input style="color: black" type="text" name="deskripsi" value="{{$data->deskripsi}}"required>
+                <input style="color: black" type="text" name="deskripsi" value="{{$data->deskripsi}}">
             </div>
-            <div>
+            <div class="form-group">
                 <label>Foto Menu Sebelum Update</label>
-                <img width="100" src="/FotoMakanan/{{$data->gb_makanan}}" >
+                <img width="150" src="/FotoMakanan/{{$data->gb_makanan}}" >
             </div>
-              <div>
+              <div class="form-group">
                 <label>Foto Menu Baru</label>
-                <input style="color: black" type="file" name="gb_makanan" required>
+                <input style="color: black" type="file" name="gb_makanan" >
             </div>
-            <div>
-                <input type="submit" class="btn btn-outline-light btn-fw" value="Simpan">
-            </div>
-
-
-
-
-
 
         </form>
-
-
+        <button  class="btn btn-outline-light btn-fw" type="submit" form="updatemenu" >Simpan</button>
+        <a button class="btn btn-outline-dark btn-fw" href="{{route('menu')}}">Batalkan</button></a>
+          </div>
+        </div>
     </div>
-
     </div>
-
-
-
 
    @include('admin.adminscript')
   </body>

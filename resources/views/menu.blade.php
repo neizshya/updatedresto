@@ -6,7 +6,7 @@
                 <div class="col-lg-4">
                     <div class="section-heading">
                         <h6>Our Menu</h6>
-                        <h2>Menu yang dipilih agar selalu memiliki rasa berkualitas</h2>
+                        <h2>Menu yang dipilih agar selalu memiliki cita rasa berkualitas</h2>
                         <h3>Geser gambar untuk melihat menu</h3>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
 
 
                     <div class="item">
-                        <div style="background-image: url('/FotoMakanan/{{$data->gb_makanan}}')" class='card '>
+                        <div style="background-image: url('/FotoMakanan/{{$data->gb_makanan}}')" class='card'>
                             <div class="price"><h6>{{$data->harga}}</h6></div>
                             <div class='info'>
                               <h1 class='title'>{{$data->nm_makanan}}</h1>

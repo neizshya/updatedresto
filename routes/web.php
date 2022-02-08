@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',[HomeController::class,"index"]);
+Route::get('/',[HomeController::class,"index"])->name('home');
 
 Route::get('/adm',[HomeController::class,"adm"])->name('admin');
 
@@ -26,7 +26,7 @@ Route::get('/user',[AdminController::class,"user"]);
 
 ##menu
 Route::get('/deletemenu/{id}',[AdminController::class,"deletemenu"]);
-Route::get('/menu',[AdminController::class,"menu"]);
+Route::get('/menu',[AdminController::class,"menu"])->name('menu');
 Route::get('/tambah',[AdminController::class,"tambah"]);
 Route::post('/updatemenu/{id}',[AdminController::class,"update"]);
 
@@ -44,7 +44,7 @@ Route::get('/deletereser/{id}',[AdminController::class,"deletereser"]);
 
 
 #chef
-Route::get('/viewchef',[AdminController::class,"viewchef"]);
+Route::get('/viewchef',[AdminController::class,"viewchef"])->name('chef');
 
 Route::post('/uploadchef',[AdminController::class,"uploadchef"]);
 

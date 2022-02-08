@@ -7,40 +7,47 @@
    @include('admin.admincss')
   </head>
   <body>
-    <div class="content-wrapper">
-    <div class="container-scroller" style="width:fit-content;">
     @include('admin.navbar')
-    <div class="col-lg-10 grid-margin stretch-card">
+    @include('admin.nav')
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title"> Tambah Daftar Menu </h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('admin')}}">Admin</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tambah Daftar Menu</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="row">
+    <div class="col-12 grid-margin stretch-card">
         <div class="card">
 
           <div class="card-body">
 
-            <h4 class="card-title">Tambah Daftar Menu</h4>
-
-        <div class="container" id="container-menu">
             <form action="{{url('/uploadmakanan')}}" method="post" enctype="multipart/form-data" id="formMenu" class="forms-sample">
                 @csrf
                 <div class="form-group">
                     <span>Nama</span>
-                    <input type="text" name="nm_makanan" placeholder="Masukan Nama Makanan" required>
+                    <input type="text"  name="nm_makanan" placeholder="Masukan Nama Makanan" style="color:black" required>
                 </div>
                 <div class="form-group">
                     <span>Harga</span>
-                    <input type="text" name="harga" placeholder="Harga" style="width: 150px;" required>
+                    <input type="text" name="harga" placeholder="Harga" style="color:black" required>
                 </div>
                 <div class="form-group">
                     <span>Foto</span>
-                    <input type="file" name="gb_makanan" required style="color: #fff; font-weight: bold;">
+                    <input type="file" name="gb_makanan" required style="color: #fff;">
                 </div>
                 <div class="form-group">
                     <span>Deskripsi</span>
-                    <input type="text" name="deskripsi" placeholder="Masukan Deskripsi Makanan" required>
+                    <input type="text" name="deskripsi" placeholder="Masukan Deskripsi Makanan" style="color:black" required>
                 </div>
 
-                <div class="form-group">
-                    <button class="btn btn-outline-primary btn-fw" type="submit" id="simpanMenu" value="Simpan">Simpan</button>
-                </div>
+
             </form>
+            <button  class="btn btn-outline-light btn-fw" type="submit" form="formMenu" >Simpan</button>
+            <a button class="btn btn-outline-dark btn-fw" href="{{route('menu')}}">Batalkan</button></a>
         </div>
 
         </div>

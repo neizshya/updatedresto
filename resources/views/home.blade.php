@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Team A Restaurant</title>
+    <title>Galaxy Resto</title>
 <!--
 
 TemplateMo 558 Klassy Cafe
@@ -52,7 +52,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="" class="logo">
-                            <img src="klassy/assets/images/klassy-logo.png" align="klassy cafe html template">
+                            <img src="logo/putih.png" align="klassy cafe html template">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -64,7 +64,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
                             @role('admin')
-                            <li><a href="{{route('admin')}}">Dashoard Admin</a></li>
+                            <li><a href="{{route('admin')}}">Dashboard Admin</a></li>
                             @endrole
                             <li>
                                 @if (Route::has('login'))
@@ -104,10 +104,10 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-4">
                     <div class="left-content">
                         <div class="inner-content">
-                            <h4>KlassyCafe</h4>
-                            <h6>THE BEST EXPERIENCE</h6>
+                            <h4>Galaxy Resto</h4>
+                            <h6>Resto Tempat Anda Beristirahat</h6>
                             <div class="main-white-button scroll-to-section">
-                                <a href="#reservation">Make A Reservation</a>
+                                <a href="#reservation">Buat Reservasi</a>
                             </div>
                         </div>
                     </div>
@@ -152,9 +152,9 @@ https://templatemo.com/tm-558-klassy-cafe
                     <div class="left-text-content">
                         <div class="section-heading">
                             <h6>About Us</h6>
-                            <h2>We Leave A Delicious Memory For You</h2>
+                            <h2>Nostalgic and Comfy Place</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <p>Tempat Dimana Anda Dapat Beristirahat dari Penatnya Pekerjaan</p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="klassy/assets/images/about-thumb-01.jpg" alt="">
@@ -181,8 +181,9 @@ https://templatemo.com/tm-558-klassy-cafe
     </section>
     <!-- ***** About Area Ends ***** -->
     @include('menu')
-    @include("reservation")
     @include("foodchef")
+    @include("reservation")
+
 
     <!-- ***** Footer Start ***** -->
     <footer>
@@ -195,7 +196,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href=""><img src="klassy/assets/images/white-logo.png" alt=""></a>
+                        <a href=""><img src="logo/merah.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">

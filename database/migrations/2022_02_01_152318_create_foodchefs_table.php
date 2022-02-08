@@ -18,6 +18,7 @@ class CreateFoodchefsTable extends Migration
             $table->string("name")->nullable();
             $table->string("speciality")->nullable();
             $table->string("image")->nullable();
+            $table->string("insta")->nullable();
             $table->timestamps();
         });
     }

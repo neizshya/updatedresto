@@ -6,15 +6,23 @@
    @include('admin.admincss')
   </head>
   <body>
-    <div class="content-wrapper">
-    <div class="container-scroller" style="width:fit-content;">
     @include('admin.navbar')
-    <div class="col-lg-10 grid-margin stretch-card">
+    @include('admin.nav')
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title">Tambah Chef</h3>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{route('admin')}}">Admin</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tambah Chef</li>
+                  </ol>
+                </nav>
+              </div>
+
+    <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
 
           <div class="card-body">
-
-            <h4 class="card-title">Tambah Chef</h4>
             <form action="{{ url('/uploadchef') }}" method="Post" enctype="multipart/form-data">
 
                 @csrf
@@ -26,6 +34,10 @@
                 <div>
                     <label>Spesialis</label>
                     <input style="color: black;" type="text" name="speciality" required="" placeholder="Masukan Spesialis">
+                </div>
+                <div>
+                    <label>Instagram</label>
+                    <input style="color: black;" type="text" name="insta" placeholder="Masukan Instagram">
                 </div>
                 <div>
                     <input type="file" name="image" required="">

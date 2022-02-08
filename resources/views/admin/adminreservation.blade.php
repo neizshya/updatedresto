@@ -14,17 +14,24 @@ h1 {text-align: center;}
    @include('admin.admincss')
   </head>
   <body>
-    <div class="content-wrapper">
-        <div class="container-scroller" style="width: 102%  ;">
     @include('admin.navbar')
+    @include('admin.nav')
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> Reservasi</h3>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{route('admin')}}">Admin</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Reservasi</li>
+                  </ol>
+                </nav>
+              </div>
 
-
-    <div class="col-lg-10 grid-margin stretch-card">
+    <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
 
           <div class="card-body">
 
-            <h4 class="card-title">Daftar Reservasi</h4>
     <div class="table">
         <table class="w-full">
             <tr class="text-center font-bold">

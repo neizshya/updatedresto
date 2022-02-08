@@ -14,40 +14,51 @@ h1 {text-align: center;}
    @include('admin.admincss')
   </head>
   <body>
+    @include('admin.navbar')
+    @include('admin.nav')
     <div class="content-wrapper">
-        <div class="container-scroller" style="width: 102%">
-            @include('admin.navbar')
-            <div class="col-lg-10 grid-margin stretch-card">
+        <div class="page-header">
+            <h3 class="page-title"> Ubah Chef </h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('admin')}}">Admin</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ubah  Chef</li>
+              </ol>
+            </nav>
+          </div>
+
+            <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
 
                   <div class="card-body">
-
-                    <h4 class="card-title">Update Chef</h4>
-    <form action="{{ url('/updatefoodchef',$data->id) }}" method="Post" enctype="multipart/form-data">
-
+    <form action="{{ url('/updatefoodchef',$data->id) }}" method="Post" enctype="multipart/form-data" id="updatechef">
         @csrf
 
-        <div>
+        <div class="form-group">
             <label>Nama Chef</label>
             <input style="color: black;" type="text" name="name" value="{{ $data->name }}">
         </div>
-        <div>
+        <div class="form-group">
             <label>Spesialis</label>
             <input style="color: black;" type="text" name="speciality" value="{{ $data->speciality }}">
-
         </div>
-        <div>
+        <div class="form-group">
+            <label>Instagram</label>
+            <input style="color: black;" type="text" name="insta" value="{{$data->insta}}">
+        </div>
+        <div class="form-group">
             <label>Foto Lama</label>
-            <img height="200" widht="200" src="/fotochef/{{ $data->image }}">
+            <img width="150" src="/fotochef/{{ $data->image }}">
         </div>
-        <div>
+        <div class="form-group">
             <label>Foto Baru</label>
             <input type="file" name="image" required="">
         </div>
-        <div>
-            <input style="color: red;" type="submit" value="Update Chef">
-        </div>
+
     </form>
+    <br>
+    <button  class="btn btn-outline-light btn-fw" type="submit" form="updatechef" >Simpan</button>
+        <a button class="btn btn-outline-dark btn-fw" href="{{route('chef')}}">Batalkan</button></a>
 
     </div>
    @include('admin.adminscript')

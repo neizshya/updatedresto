@@ -1,5 +1,6 @@
  <!-- container-scroller -->
     <!-- plugins:js -->
+</div>
     <script src="admin/template/assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->

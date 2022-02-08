@@ -7,18 +7,23 @@
    @include('admin.admincss')
   </head>
   <body>
-        <div class="content-wrapper">
-    <div class="container-scroller" style="width: 102%">
-
     @include('admin.navbar')
+    @include('admin.nav')
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> Daftar Menu </h3>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{route('admin')}}">Admin</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Daftar Menu</li>
+                  </ol>
+                </nav>
+              </div>
 
-
-    <div class="col-lg-10 grid-margin stretch-card">
+    <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
 
           <div class="card-body">
-
-            <h4 class="card-title">Daftar Menu</h4>
 
             <div class="table">
                 <table class="w-full">
@@ -34,8 +39,8 @@
                         <td class="border px-5 py-2" >{{$data->nm_makanan}}</td>
                         <td class="border px-5 py-2">{{$data->harga}}</td>
                         <td class="border px-5 py-2">{{$data->deskripsi}}</td>
-                        <td class="border px-5 py-2"><img  src="/FotoMakanan/{{$data->gb_makanan}}" height="300" width="300"></td>
-                        <td class="border px-5 py-2" id="actionMenu">
+                        <td class="border px-5 py-2"><img  src="/FotoMakanan/{{$data->gb_makanan}}" height="300"></td>
+                        <td class="border px-5 py-2">
                             <a href="{{url('/deletemenu',$data->id)}} " class="btn btn-sm btn-danger" id="delMenu">Delete</a><br><br>
                             <a href="{{url('/updateview',$data->id)}} " class="btn btn-sm btn-warning" id="updateMenu"> Ubah</a>
                         </td>
