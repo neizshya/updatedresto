@@ -35,7 +35,7 @@ class CreateNewUser implements CreatesNewUsers
         ]);
         DB::table('role_user')->updateOrInsert(
             ['user_id' => $user->id],
-            ['user_id' => $user->id, 'role_id' => '2', 'user_type' => 'App\Models\User']);
+            ['user_id' => $user->id, 'role_id' => '14', 'user_type' => 'App\Models\User']);
         return $user;
     }
 }
