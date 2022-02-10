@@ -5,7 +5,7 @@
             <div class="col-lg-4 offset-lg-4 text-center">
                 <div class="section-heading">
                     <h6>Our Chefs</h6>
-                    <h2>Chef yang Bepengalaman Pada Bidangnya
+                    <h2>Chef yang Berpengalaman Pada Bidangnya
                     </h2>
                 </div>
             </div>
