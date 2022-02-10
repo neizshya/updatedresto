@@ -41,8 +41,9 @@
                         <td >{{$data->deskripsi}}</td>
                         <td ><img  src="/FotoMakanan/{{$data->gb_makanan}}" height="300"></td>
                         <td >
-                            <a href="{{url('/deletemenu',$data->id)}} " class="btn btn-sm btn-danger" id="delMenu">Delete</a><br><br>
                             <a href="{{url('/updateview',$data->id)}} " class="btn btn-sm btn-warning" id="updateMenu"> Ubah</a>
+                            <a href="{{url('/deletemenu',$data->id)}} " class="btn btn-sm btn-danger" id="delMenu">Delete</a><br><br>
+
                         </td>
                        </tr>
                        @endforeach
