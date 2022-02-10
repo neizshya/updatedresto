@@ -128,7 +128,7 @@ class AdminController extends Controller
 
         $data->delete();
 
-        return view("admin.adminreservation",compact("data"));
+        return redirect()->route('reserve');
     }
 
     public function viewchef()
